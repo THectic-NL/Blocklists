@@ -43,9 +43,9 @@ nextdnsctl allowlist import <profile-id> allowlist/domains.txt
 **Pi-hole / AdGuard Home** — add the raw GitHub URLs as adlists:
 
 ```
-https://raw.githubusercontent.com/Stensel8/DNS-Block/main/tiktok/hosts.txt
-https://raw.githubusercontent.com/Stensel8/DNS-Block/main/meta/hosts.txt
-https://raw.githubusercontent.com/Stensel8/DNS-Block/main/google/hosts.txt
+https://raw.githubusercontent.com/THectic-NL/DNS-Blocklists/main/tiktok/hosts.txt
+https://raw.githubusercontent.com/THectic-NL/DNS-Blocklists/main/meta/hosts.txt
+https://raw.githubusercontent.com/THectic-NL/DNS-Blocklists/main/google/hosts.txt
 ```
 
 ## Recommended public lists
