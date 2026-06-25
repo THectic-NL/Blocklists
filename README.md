@@ -36,9 +36,14 @@ Each folder contains:
 
 ## IP lists
 
-See [`IP/`](IP/) for IP/CIDR-based blocklists, intended for firewall-level
-blocking rather than DNS resolvers. See that folder's README for status and
-recommended public feeds.
+For firewall-level blocking (rather than DNS resolvers), see [`IP/`](IP/):
+
+| Folder | IPs | Notes |
+|---|---|---|
+| [IP/datto-kaseya/](IP/datto-kaseya/) | 18 | Datto RMM / Kaseya IP fallback addresses |
+
+Each folder contains `ips.txt` — a plain IP list for `ipset`/`nftables`,
+pfSense/pfBlockerNG, OPNsense, and router ACLs.
 
 ## Usage
 

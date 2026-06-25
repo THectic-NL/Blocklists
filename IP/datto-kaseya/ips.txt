@@ -1,0 +1,29 @@
+# Datto RMM / Kaseya — IP fallback blocklist
+#
+# IP companion to ../../DNS/datto-kaseya/ (domain list). These are the original
+# "IP fallback addresses" for the Datto RMM / Kaseya ecosystem: block traffic to
+# them at the firewall (pfSense/pfBlockerNG, OPNsense, ipset/nftables) even when
+# DNS is bypassed.
+#
+# Note: these resolve to cloud infrastructure (AWS Global Accelerator / EC2 /
+# CloudFront) and can rotate over time — re-verify periodically.
+# Source: original datto-kaseya/hosts.txt. 18 addresses.
+
+75.2.101.69
+54.77.247.84
+3.33.177.203
+99.83.237.20
+54.154.110.190
+54.171.164.97
+34.251.153.77
+52.16.205.224
+54.77.69.163
+54.77.108.71
+18.239.105.98
+3.33.220.55
+54.154.190.153
+52.16.135.243
+34.249.127.133
+52.16.199.216
+18.239.105.82
+54.154.123.55

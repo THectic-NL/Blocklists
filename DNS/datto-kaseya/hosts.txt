@@ -11,6 +11,7 @@
 # Last updated: 2026-06-25
 #
 # Total domains: 6
+# IP fallback addresses: see ../../IP/datto-kaseya/ips.txt
 #
 
 0.0.0.0	datto.io

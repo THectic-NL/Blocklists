@@ -11,16 +11,15 @@ addresses or ranges regardless of DNS. They protect different layers, so they
 are kept apart: a DNS resolver can't enforce an IP list, and a firewall can't
 read a hosts file.
 
-## Status
+## Lists
 
-No curated IP lists are published here yet.
+| Folder | IPs | Notes |
+|---|---|---|
+| [datto-kaseya/](datto-kaseya/) | 18 | Datto RMM / Kaseya IP fallback addresses — companion to [`../DNS/datto-kaseya/`](../DNS/datto-kaseya/) |
 
-The Datto / Kaseya entry is **domain-based** and lives in
-[`../DNS/datto-kaseya/`](../DNS/datto-kaseya/). Reliable fallback-IP data for it
-was not available to include here — those domains sit behind shared cloud
-infrastructure (AWS / CloudFront), whose addresses rotate and are reused by
-unrelated services, so blocking them by IP causes collateral damage. If you have
-a trustworthy source of dedicated IPs, open an issue or PR and they'll be added.
+These IPs resolve to cloud infrastructure (AWS Global Accelerator / EC2 /
+CloudFront) and can rotate over time, so re-verify them periodically. They are
+provided as a fallback for blocking traffic even when DNS is bypassed.
 
 ## Recommended public IP blocklists
 
