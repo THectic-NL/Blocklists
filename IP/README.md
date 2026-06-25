@@ -1,30 +1,30 @@
 # IP Blocklists
 
-IP and CIDR blocklists for **firewall-level** blocking — pfSense, OPNsense,
-`iptables`/`nftables`, router ACLs — as opposed to the domain-based DNS lists
-in [`../DNS/`](../DNS/).
+IP and CIDR lists for blocking at the firewall, so pfSense, OPNsense, iptables or
+nftables, or a router ACL. The domain based DNS lists are in [../DNS/](../DNS/).
 
-## Why a separate folder?
+## Why this is separate from DNS
 
-DNS blocklists stop *name resolution*; IP blocklists drop *traffic* to specific
-addresses or ranges regardless of DNS. They protect different layers, so they
-are kept apart: a DNS resolver can't enforce an IP list, and a firewall can't
-read a hosts file.
+A DNS blocklist stops a name from resolving. An IP list drops traffic to an
+address whatever DNS says. They work at different layers. A resolver cannot read
+an IP list and a firewall cannot read a hosts file, so it is cleaner to keep them
+apart.
 
 ## Lists
 
 | Folder | IPs | Notes |
 |---|---|---|
-| [datto-kaseya/](datto-kaseya/) | 18 | Datto RMM / Kaseya IP fallback addresses — companion to [`../DNS/datto-kaseya/`](../DNS/datto-kaseya/) |
+| [datto-kaseya/](datto-kaseya/) | 73 | Datto RMM and Kaseya, the IP side of [../DNS/datto-kaseya/](../DNS/datto-kaseya/) |
 
-These IPs resolve to cloud infrastructure (AWS Global Accelerator / EC2 /
-CloudFront) and can rotate over time, so re-verify them periodically. They are
-provided as a fallback for blocking traffic even when DNS is bypassed.
+A good number of these addresses sit on shared CDNs like Cloudflare, Akamai and
+AWS CloudFront, so they change over time and can also front unrelated sites. The
+DNS list is the more reliable way to block Datto and Kaseya. Treat the IPs as a
+backstop and re-check them now and then.
 
-## Recommended public IP blocklists
+## Other IP lists worth running
 
-Until curated lists land here, these reputable feeds are good IP-layer sources:
+If you want broader coverage at the IP layer, these are solid public feeds.
 
-- **[abuse.ch Feodo Tracker](https://feodotracker.abuse.ch/blocklist/)** — active botnet C2 IP addresses
-- **[Spamhaus DROP / EDROP](https://www.spamhaus.org/drop/)** — hijacked and malicious netblocks
-- **[FireHOL IP lists](https://github.com/firehol/blocklist-ipsets)** — aggregated IP reputation feeds
+- abuse.ch Feodo Tracker for active botnet C2 addresses
+- Spamhaus DROP and EDROP for hijacked and malicious netblocks
+- FireHOL IP lists for aggregated reputation feeds
