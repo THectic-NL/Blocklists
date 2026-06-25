@@ -123,3 +123,17 @@ sonos.extole.io
 sonos.radio
 okta.com
 sync-v2.brave.com
+archive.today
+archive.ph
+okx.com
+okcoin.com
+bunny.net
+bunny.run
+eu.sparkpostmail.com
+eu.sparkpostmail1.com
+e.customeriomail.com
+email.demio.com
+click.e.change.org
+go.getproton.me
+w3tutorials.net
+googleadservices.com

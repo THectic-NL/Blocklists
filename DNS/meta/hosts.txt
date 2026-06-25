@@ -8,16 +8,15 @@
 # - Cross-platform data sharing
 #
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2025-10-12
+# Last updated: 2026-06-25
 #
-# Total domains: 42
+# Total domains: 38
 #
 
 0.0.0.0	atdmt.com
 0.0.0.0	atlassolutions.com
 0.0.0.0	cdninstagram.com
 0.0.0.0	connect.facebook.net
-0.0.0.0	dit.whatsapp.net
 0.0.0.0	fbcdn.com
 0.0.0.0	fbcdn.net
 0.0.0.0	fbsbx.com
@@ -25,8 +24,6 @@
 0.0.0.0	instagram.com
 0.0.0.0	instagram.net
 0.0.0.0	meta.ai
-0.0.0.0	wa.me
-0.0.0.0	whatsapp.com
 0.0.0.0	wit.ai
 0.0.0.0	www.instagram.com
 0.0.0.0	api.facebook.com
@@ -49,7 +46,6 @@
 0.0.0.0	upload.facebook.com
 0.0.0.0	upload.instagram.com
 0.0.0.0	web.facebook.com
-0.0.0.0	web.whatsapp.com
 0.0.0.0	www.messenger.com
 0.0.0.0	messenger.com
 0.0.0.0	facebook.net

@@ -6,18 +6,15 @@ admob.googleapis.com
 analytics.google.com
 doubleclick.net
 google-analytics.com
-googleadservices.com
 googleads.g.doubleclick.net
 googlesyndication.com
 googletagmanager.com
 googletagservices.com
-googlevideo.com
 pagead2.googlesyndication.com
 partnerad.l.doubleclick.net
 stats.g.doubleclick.net
 tpc.googlesyndication.com
 www.google-analytics.com
-www.googleadservices.com
 www.googletagmanager.com
 www.googletagservices.com
 ade.googlesyndication.com
@@ -25,4 +22,3 @@ cm.g.doubleclick.net
 securepubads.g.doubleclick.net
 tagger.opecloud.com
 whistleflower.com
-yt3.ggpht.com

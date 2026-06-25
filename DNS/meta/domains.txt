@@ -2,7 +2,6 @@ atdmt.com
 atlassolutions.com
 cdninstagram.com
 connect.facebook.net
-dit.whatsapp.net
 fbcdn.com
 fbcdn.net
 fbsbx.com
@@ -10,8 +9,6 @@ graph.facebook.com
 instagram.com
 instagram.net
 meta.ai
-wa.me
-whatsapp.com
 wit.ai
 www.instagram.com
 api.facebook.com
@@ -34,7 +31,6 @@ static.xx.fbcdn.net
 upload.facebook.com
 upload.instagram.com
 web.facebook.com
-web.whatsapp.com
 www.messenger.com
 messenger.com
 facebook.net

@@ -1,0 +1,22 @@
+# Datto RMM / Kaseya Blocking List
+# 
+# This list blocks Datto RMM and Kaseya tracking and management domains:
+# - Enterprise remote monitoring and management software
+# - Network tracking and device discovery
+# - Remote access and control infrastructure
+# - Telemetry and data collection endpoints
+#
+# Referenced: 2021 Kaseya ransomware supply chain attack
+# Format: 0.0.0.0 domain.com (hosts file format)
+# Last updated: 2026-06-25
+#
+# Total domains: 6
+# The IP addresses for these are in ../../IP/datto-kaseya/ips.txt
+#
+
+0.0.0.0	datto.io
+0.0.0.0	dattobackup.com
+0.0.0.0	kaseya.com
+0.0.0.0	datto.com
+0.0.0.0	centrastage.net
+0.0.0.0	infocyte.com
