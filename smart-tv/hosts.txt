@@ -1,0 +1,63 @@
+# Smart-TV Telemetry & ACR Blocking List
+# 
+# This list blocks smart-TV tracking, advertising and ACR domains:
+# - Samsung ACR (Automatic Content Recognition) and Samsung Ads
+# - LG smart-TV advertising (LG Ad / smartad)
+# - Roku, Samba TV and Vizio (tvinteractive) telemetry
+# - smartclip / HbbTV advertising infrastructure
+#
+# Source: curated from blocklistproject (smart-tv), filtered against this repo's allowlist
+# Format: 0.0.0.0 domain.com (hosts file format)
+# Last updated: 2026-06-25
+#
+# Total domains: 48
+#
+
+0.0.0.0	ad.sxp.smartclip.net
+0.0.0.0	ads.samsungads.com
+0.0.0.0	aic-ngfts.lge.com
+0.0.0.0	amarillo.sb.roku.com
+0.0.0.0	az43064.vo.msecnd.net
+0.0.0.0	bif.sr.roku.com
+0.0.0.0	cdn.hbbtv.smartclip.net
+0.0.0.0	cloudservices.roku.com
+0.0.0.0	config.samsungads.com
+0.0.0.0	control-zoo-dtsstage.tvinteractive.tv
+0.0.0.0	cooper.logs.roku.com
+0.0.0.0	errors.hbbtv.smartclip.net
+0.0.0.0	events.cid.samba.tv
+0.0.0.0	events.samsungads.com
+0.0.0.0	game.internetat.tv
+0.0.0.0	hoover.sxp.smartclip.net
+0.0.0.0	img-resize-cdn-prod.samsungnyc.com
+0.0.0.0	infolink.pavv.co.kr
+0.0.0.0	lgad.cjpowercast.com
+0.0.0.0	log-1.samsungacr.com
+0.0.0.0	log-2.samsungacr.com
+0.0.0.0	log-config.samsungacr.com
+0.0.0.0	ngfts.lge.com
+0.0.0.0	osb-v2.samsungqbe.com
+0.0.0.0	osb.samsungqbe.com
+0.0.0.0	p.ads.roku.com
+0.0.0.0	platform.cid.samba.tv
+0.0.0.0	premium-videos.telly.com
+0.0.0.0	samsungacr.com
+0.0.0.0	samsungads.com
+0.0.0.0	samsungcloudsolution.net
+0.0.0.0	samsungotn.net
+0.0.0.0	samsungrm.net
+0.0.0.0	scheduler.hbbtv.smartclip.net
+0.0.0.0	scribe.logs.roku.com
+0.0.0.0	scs.samsungqbe.com
+0.0.0.0	smartclip.com
+0.0.0.0	smartclip.net
+0.0.0.0	stats.hbbtv.smartclip.net
+0.0.0.0	syncplusconfig.s3.amazonaws.com
+0.0.0.0	targeted-config-test.samsungacr.com
+0.0.0.0	traces.sr.roku.com
+0.0.0.0	track.sr.roku.com
+0.0.0.0	tvinteractive.tv
+0.0.0.0	tvx.adgrx.com
+0.0.0.0	us.ad.lgsmartad.com
+0.0.0.0	us.info.lgsmartad.com
+0.0.0.0	yumenetworks.com

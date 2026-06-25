@@ -3,8 +3,6 @@ sqm.telemetry.microsoft.com
 telecommand.telemetry.microsoft.com
 telemetry.microsoft.com
 vortex.data.microsoft.com
-web.vortex.data.microsoft.com
-v10.vortex-win.data.microsoft.com
 v20.vortex-win.data.microsoft.com
 adnexus.net
 bing.com.trafficmanager.net

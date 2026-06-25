@@ -8,9 +8,9 @@
 #
 # Note: This does NOT block Windows Updates, Office functionality, or Xbox Live
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2025-10-12
+# Last updated: 2026-06-25
 #
-# Total domains: 22
+# Total domains: 20
 #
 
 0.0.0.0	oca.telemetry.microsoft.com
@@ -18,8 +18,6 @@
 0.0.0.0	telecommand.telemetry.microsoft.com
 0.0.0.0	telemetry.microsoft.com
 0.0.0.0	vortex.data.microsoft.com
-0.0.0.0	web.vortex.data.microsoft.com
-0.0.0.0	v10.vortex-win.data.microsoft.com
 0.0.0.0	v20.vortex-win.data.microsoft.com
 0.0.0.0	adnexus.net
 0.0.0.0	bing.com.trafficmanager.net

@@ -7,37 +7,15 @@
 # - Telemetry and data collection endpoints
 #
 # Referenced: 2021 Kaseya ransomware supply chain attack
-# Use this blocklist if you want to block Datto/Kaseya tracking
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2025-12-15
+# Last updated: 2026-06-25
 #
-# Total: 18 IPs + 5 domain wildcards
+# Total domains: 6
 #
 
-# IP Fallback Addresses
-0.0.0.0	75.2.101.69
-0.0.0.0	54.77.247.84
-0.0.0.0	3.33.177.203
-0.0.0.0	99.83.237.20
-0.0.0.0	54.154.110.190
-0.0.0.0	54.171.164.97
-0.0.0.0	34.251.153.77
-0.0.0.0	52.16.205.224
-0.0.0.0	54.77.69.163
-0.0.0.0	54.77.108.71
-0.0.0.0	18.239.105.98
-0.0.0.0	3.33.220.55
-0.0.0.0	54.154.190.153
-0.0.0.0	52.16.135.243
-0.0.0.0	34.249.127.133
-0.0.0.0	52.16.199.216
-0.0.0.0	18.239.105.82
-0.0.0.0	54.154.123.55
-
-# Domain Wildcards (everything that ends with these domains will be blocked)
 0.0.0.0	datto.io
 0.0.0.0	dattobackup.com
 0.0.0.0	kaseya.com
 0.0.0.0	datto.com
 0.0.0.0	centrastage.net
-0.0.0.0 infocyte.com
+0.0.0.0	infocyte.com

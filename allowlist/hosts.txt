@@ -5,9 +5,9 @@
 # These domains are maintained to ensure important services and apps continue to work.
 #
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2025-10-12
+# Last updated: 2026-06-25
 #
-# Total domains: 125
+# Total domains: 139
 #
 
 0.0.0.0	v10.events.data.microsoft.com
@@ -99,8 +99,6 @@
 0.0.0.0	ping.ui.com
 0.0.0.0	ips1.unifi-ai.com
 0.0.0.0	fw-update.ubnt.com
-
-# Torrent / indexers
 0.0.0.0	1337x.to
 0.0.0.0	x1337x.eu
 0.0.0.0	kickasstorrents.ws
@@ -117,12 +115,8 @@
 0.0.0.0	thpibay.xyz
 0.0.0.0	thpibay.site
 0.0.0.0	thepibay.site
-
-# Gaming
 0.0.0.0	worldoftanks.eu
 0.0.0.0	wargaming.net
-
-# Microsoft Update Services
 0.0.0.0	update.microsoft.com
 0.0.0.0	dl.delivery.mp.microsoft.com
 0.0.0.0	tlu.dl.delivery.mp.microsoft.com
@@ -130,26 +124,28 @@
 0.0.0.0	geo-prod.do.dsp.mp.microsoft.com
 0.0.0.0	fe3.delivery.dsp.mp.microsoft.com.nsatc.net
 0.0.0.0	sls.update.microsoft.com.akadns.net
-
-# Microsoft / Google services
 0.0.0.0	office365.com
 0.0.0.0	onedrive.com
 0.0.0.0	cast.com
 0.0.0.0	gvt1.com
 0.0.0.0	googleusercontent.com
-
-# Home automation
 0.0.0.0	home-assistant.io
-
-# Shopping
 0.0.0.0	partner.bol.com
-
-# Sonos
 0.0.0.0	sonos.extole.io
 0.0.0.0	sonos.radio
-
-# SSO / Identity
 0.0.0.0	okta.com
-
-# Brave sync
 0.0.0.0	sync-v2.brave.com
+0.0.0.0	archive.today
+0.0.0.0	archive.ph
+0.0.0.0	okx.com
+0.0.0.0	okcoin.com
+0.0.0.0	bunny.net
+0.0.0.0	bunny.run
+0.0.0.0	eu.sparkpostmail.com
+0.0.0.0	eu.sparkpostmail1.com
+0.0.0.0	e.customeriomail.com
+0.0.0.0	email.demio.com
+0.0.0.0	click.e.change.org
+0.0.0.0	go.getproton.me
+0.0.0.0	w3tutorials.net
+0.0.0.0	googleadservices.com
