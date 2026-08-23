@@ -2,18 +2,32 @@
 # SPDX-License-Identifier: MIT
 name: PR title
 
-# De titel van de pull request is wat er op main terechtkomt zodra je squasht,
-# dus dat is de plek waar Conventional Commits gecontroleerd moet worden en niet
-# op de losse commits in de branch.
+# Twee controles op de pull request zelf, bewust in één job.
 #
-# Renovate levert zijn eigen titels al in dit formaat aan; dat is de
-# semanticCommits-instelling in renovate.json. Deze controle dekt de rest.
+# GitHub rekent per job en rondt elke job naar boven af op een hele minuut.
+# Beide stappen hieronder zijn in een paar seconden klaar en hebben geen
+# checkout nodig, dus als losse jobs kosten ze twee volle minuten voor werk
+# van tien seconden. In één job is dat één minuut.
+#
+# Dat de job `pull-requests: write` heeft terwijl de titelcontrole aan lezen
+# genoeg heeft, is de prijs van die samenvoeging. Beide actions staan op een
+# vastgezette SHA, dus dat is hier een acceptabele ruil.
+#
+# De titel en niet de losse commits: de titel is wat er op main terechtkomt
+# zodra je squasht. Renovate levert zijn eigen titels al in dit formaat aan;
+# dat is de semanticCommits-instelling in renovate.json.
 
 on:
   pull_request:
     # edited hoort erbij: zonder dat blijft de check rood staan nadat iemand de
     # titel heeft verbeterd, want een titelwijziging is geen nieuwe push.
     types: [opened, edited, synchronize, reopened]
+
+# Snel achter elkaar de omschrijving aanpassen startte evenveel runs. Alleen de
+# laatste zegt nog iets, dus de rest mag weg.
+concurrency:
+  group: pr-title-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 permissions: {}
 
@@ -22,7 +36,7 @@ jobs:
     name: Conventional commit title
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: read
+      pull-requests: write
     steps:
       - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
         env:
@@ -37,3 +51,59 @@ jobs:
             refactor
             style
             revert
+
+      # Vinkt de twee punten af die uit de pull request zelf af te leiden zijn,
+      # en ruimt de niet-gekozen regels onder "Type wijziging" op. De rest van
+      # de checklist blijft handwerk: of iemand de pagina echt in de browser
+      # heeft bekeken, valt hier niet te controleren.
+      #
+      # Draait op !cancelled(), zodat een afgekeurde titel het opruimen niet
+      # tegenhoudt -- juist dan wil je de checklist bijgewerkt zien.
+      - name: Update PR checklist
+        if: ${{ !cancelled() }}
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+            });
+
+            let body = pr.body || '';
+            if (!body.trim()) return;
+
+            const setCheck = (keyword, passed) => {
+              body = body.replace(
+                new RegExp(`- \\[[ xX]\\] (.*${keyword}.*)`, 'i'),
+                `- [${passed ? 'x' : ' '}] $1`
+              );
+            };
+
+            // Dezelfde typelijst als hierboven en als CONTRIBUTING.md. Scope en
+            // een `!` voor een breaking change zijn toegestaan: feat(nav)!: ...
+            const TITLE_RE =
+              /^(feat|fix|content|docs|chore|refactor|style|revert)(\([^)]+\))?!?: .+/;
+            setCheck('PR-titel volgt', TITLE_RE.test(pr.title));
+
+            // De niet-gekozen types weghalen, maar alleen als er al een gekozen
+            // is. Zonder die voorwaarde stript de eerste run alle acht regels
+            // weg voordat de auteur er een heeft aangevinkt, en is de sectie
+            // weg voordat hij gebruikt kon worden.
+            const TYPE_LINE = /^- \[([ xX])\] `\w+` —[^\n]*\n?/gm;
+            const ticked = [...body.matchAll(TYPE_LINE)]
+              .some(m => m[1].toLowerCase() === 'x');
+            if (ticked) {
+              body = body.replace(/^- \[ \] `\w+` —[^\n]*\n?/gm, '');
+            }
+
+            body = body.replace(/\n{3,}/g, '\n\n');
+
+            if (body !== pr.body) {
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                body,
+              });
+            }
