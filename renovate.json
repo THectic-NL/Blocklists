@@ -37,5 +37,13 @@
   ],
   "automerge": true,
   "automergeType": "pr",
-  "semanticCommits": "enabled"
+  "semanticCommits": "enabled",
+  "assignees": [
+    "Stensel8",
+    "AdiH1310"
+  ],
+  "reviewers": [
+    "Stensel8",
+    "AdiH1310"
+  ]
 }
