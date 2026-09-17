@@ -1,5 +1,5 @@
 # Meta Blocking List
-# 
+#
 # This list blocks Meta (Facebook, Instagram, WhatsApp) domains to prevent:
 # - Social media tracking across websites
 # - AI data collection (Meta AI, Wit.ai)
@@ -8,46 +8,59 @@
 # - Cross-platform data sharing
 #
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2026-06-25
+# Last updated: 2026-09-17
 #
-# Total domains: 38
+# Total domains: 51
 #
 
-0.0.0.0	atdmt.com
-0.0.0.0	atlassolutions.com
-0.0.0.0	cdninstagram.com
-0.0.0.0	connect.facebook.net
-0.0.0.0	fbcdn.com
-0.0.0.0	fbcdn.net
-0.0.0.0	fbsbx.com
-0.0.0.0	graph.facebook.com
-0.0.0.0	instagram.com
-0.0.0.0	instagram.net
-0.0.0.0	meta.ai
-0.0.0.0	wit.ai
-0.0.0.0	www.instagram.com
+0.0.0.0	an.facebook.com
 0.0.0.0	api.facebook.com
 0.0.0.0	api.instagram.com
+0.0.0.0	atdmt.com
+0.0.0.0	atlassolutions.com
 0.0.0.0	b-api.facebook.com
 0.0.0.0	b-graph.facebook.com
+0.0.0.0	business.facebook.net
+0.0.0.0	cdninstagram.com
+0.0.0.0	connect.facebook.net
 0.0.0.0	edge-chat.facebook.com
 0.0.0.0	edge-chat.instagram.com
+0.0.0.0	facebook.net
+0.0.0.0	facebookbrand.com
+0.0.0.0	facebookmail.com
+0.0.0.0	fb.gg
+0.0.0.0	fbcdn.com
+0.0.0.0	fbcdn.net
+0.0.0.0	fbpigeon.com
+0.0.0.0	fbsbx.com
+0.0.0.0	fbworkmail.com
 0.0.0.0	gateway.facebook.com
+0.0.0.0	graph.facebook.com
+0.0.0.0	graph.instagram.com
+0.0.0.0	graph.oculus.com
+0.0.0.0	instagram-brand.com
+0.0.0.0	instagram.com
+0.0.0.0	instagram.net
 0.0.0.0	lookaside.facebook.com
 0.0.0.0	lookaside.fbsbx.com
 0.0.0.0	m.facebook.com
 0.0.0.0	m.instagram.com
+0.0.0.0	messenger.com
+0.0.0.0	meta.ai
+0.0.0.0	meta.com
 0.0.0.0	pixel.facebook.com
+0.0.0.0	rupload.facebook.com
 0.0.0.0	scontent.facebook.com
 0.0.0.0	scontent.fbcdn.net
 0.0.0.0	scontent.xx.fbcdn.net
 0.0.0.0	static.facebook.com
 0.0.0.0	static.xx.fbcdn.net
+0.0.0.0	threads.com
+0.0.0.0	threads.net
 0.0.0.0	upload.facebook.com
 0.0.0.0	upload.instagram.com
 0.0.0.0	web.facebook.com
+0.0.0.0	wit.ai
+0.0.0.0	www.instagram.com
 0.0.0.0	www.messenger.com
-0.0.0.0	messenger.com
-0.0.0.0	facebook.net
-0.0.0.0	fbworkmail.com
-0.0.0.0	instagram-brand.com
+0.0.0.0	z-m-graph.facebook.com

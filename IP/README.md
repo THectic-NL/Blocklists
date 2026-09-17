@@ -14,7 +14,14 @@ apart.
 
 | Folder | IPs | Notes |
 |---|---|---|
-| [datto-kaseya/](datto-kaseya/) | 73 | Datto RMM and Kaseya, the IP side of [../DNS/datto-kaseya/](../DNS/datto-kaseya/) |
+| [smart-tv/](smart-tv/) | 315 | Smart-TV ACR ingest, the IP side of [../DNS/acr/](../DNS/acr/) |
+| [datto-kaseya/](datto-kaseya/) | 69 | Datto RMM and Kaseya, the IP side of [../DNS/datto-kaseya/](../DNS/datto-kaseya/) |
+
+The smart-TV list exists because a DNS block is not always enough there. Samsung
+and LG sets carry resolver addresses in the firmware and several models fall back
+to DNS-over-HTTPS when the resolver handed out over DHCP refuses to answer, so the
+set never sees your Pi-hole. Redirect outbound port 53 and 853 back to your own
+resolver at the router, and drop these addresses as well.
 
 A good number of these addresses sit on shared CDNs like Cloudflare, Akamai and
 AWS CloudFront, so they change over time and can also front unrelated sites. The

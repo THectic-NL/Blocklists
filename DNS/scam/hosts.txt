@@ -1,5 +1,5 @@
 # Scam Sites Blocking List
-# 
+#
 # This list blocks known scam, fraud, and suspicious domains:
 # - Fake webshops and dropshipping scams
 # - Phishing and fraud websites
@@ -8,8 +8,17 @@
 # - Deceptive online stores
 #
 # These domains are known for fraudulent activities, fake products, or scams
+#
+# Still to import: the Dutch police list of known malafide trading parties at
+# politie.nl/aangifte-of-melding-doen/bekende-malafide-handelspartijen.html
+# (repo issue #4). It is the LMIO register of webshops, bank accounts, phone
+# numbers and email addresses reported for fraud. Import it by hand or with a
+# parser; do not guess entries from news coverage, because the register mixes
+# fraudulent shops with hijacked domains of real businesses and a wrong entry
+# here blocks a legitimate company.
+#
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2025-10-12
+# Last updated: 2026-09-17
 #
 # Total domains: 14
 #

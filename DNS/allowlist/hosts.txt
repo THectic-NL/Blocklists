@@ -1,11 +1,32 @@
-
 # Allowlist (Exclusions)
-# 
+#
 # This list contains domains that are explicitly allowed and excluded from blocking.
 # These domains are maintained to ensure important services and apps continue to work.
 #
+# Read this before you run the smart-TV lists
+#
+# How an allowlist entry behaves depends on the resolver, and the difference matters
+# now that DNS/acr/ and DNS/smart-tv/ carry per-country vendor hostnames.
+#
+# NextDNS matches an allowlist entry against the domain and all of its subdomains.
+# Four entries below therefore switch large parts of those lists back on:
+#
+#   lgtvsdp.com               shadows 321 smart-tv entries
+#   lgappstv.com              shadows 214 smart-tv entries
+#   samsungcloudsolution.com  shadows 15
+#   samsung.com               shadows 15
+#
+# That is 535 LG hostnames, among them the rdx2 data exchange and the lgrecommends
+# home-screen profiling endpoints. Remove those four lines if you want the full
+# effect and are willing to risk the LG Content Store and Samsung account sign-in.
+# They stay in by default because breaking someone's TV silently is worse than
+# leaving a gap they can see.
+#
+# Pi-hole and other hosts-format allowlists match exactly, not by suffix, so they
+# are not affected and need no change.
+#
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2026-06-25
+# Last updated: 2026-09-17
 #
 # Total domains: 139
 #

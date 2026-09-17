@@ -1,5 +1,5 @@
 # Microsoft Telemetry Blocking List
-# 
+#
 # This list blocks Microsoft telemetry and unnecessary data collection:
 # - Windows 10/11 telemetry and diagnostics
 # - Office telemetry and usage analytics
@@ -8,28 +8,58 @@
 #
 # Note: This does NOT block Windows Updates, Office functionality, or Xbox Live
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2026-06-25
+# Last updated: 2026-09-17
 #
-# Total domains: 20
+# Total domains: 50
 #
 
-0.0.0.0	oca.telemetry.microsoft.com
-0.0.0.0	sqm.telemetry.microsoft.com
-0.0.0.0	telecommand.telemetry.microsoft.com
-0.0.0.0	telemetry.microsoft.com
-0.0.0.0	vortex.data.microsoft.com
-0.0.0.0	v20.vortex-win.data.microsoft.com
+0.0.0.0	a.ads1.msn.com
+0.0.0.0	a.ads2.msn.com
+0.0.0.0	ac3.msn.com
+0.0.0.0	activity.windows.com
 0.0.0.0	adnexus.net
+0.0.0.0	ads.msn.com
+0.0.0.0	ads1.msn.com
 0.0.0.0	bing.com.trafficmanager.net
+0.0.0.0	browser.events.data.msn.com
 0.0.0.0	choice.microsoft.com
 0.0.0.0	choice.microsoft.com.nsatc.net
+0.0.0.0	clarity.ms
 0.0.0.0	compatexchange.cloudapp.net
 0.0.0.0	corp.sts.microsoft.com
 0.0.0.0	corpext.msitadfs.glbdns2.microsoft.com
 0.0.0.0	cs1.wpc.v0cdn.net
+0.0.0.0	df.telemetry.microsoft.com
 0.0.0.0	diagnostics.support.microsoft.com
+0.0.0.0	eu-mobile.events.data.microsoft.com
 0.0.0.0	feedback.microsoft-hohm.com
 0.0.0.0	feedback.search.microsoft.com
 0.0.0.0	feedback.windows.com
 0.0.0.0	flex.msn.com
+0.0.0.0	functional.events.data.microsoft.com
+0.0.0.0	i1.services.social.microsoft.com
+0.0.0.0	i1.services.social.microsoft.com.nsatc.net
+0.0.0.0	mobile.events.data.microsoft.com
+0.0.0.0	oca.telemetry.microsoft.com
+0.0.0.0	pre.footprintpredict.com
+0.0.0.0	rad.msn.com
+0.0.0.0	reports.wes.df.telemetry.microsoft.com
+0.0.0.0	self.events.data.microsoft.com
+0.0.0.0	services.wes.df.telemetry.microsoft.com
+0.0.0.0	settings-sandbox.data.microsoft.com
+0.0.0.0	sqm.df.telemetry.microsoft.com
+0.0.0.0	sqm.telemetry.microsoft.com
+0.0.0.0	survey.watson.microsoft.com
+0.0.0.0	telecommand.telemetry.microsoft.com
+0.0.0.0	telemetry.appex.bing.net
+0.0.0.0	telemetry.appex.search.prod.ms
+0.0.0.0	telemetry.microsoft.com
+0.0.0.0	telemetry.remoteapp.windowsazure.com
+0.0.0.0	telemetry.urs.microsoft.com
+0.0.0.0	us-mobile.events.data.microsoft.com
+0.0.0.0	v20.vortex-win.data.microsoft.com
+0.0.0.0	vortex-win.data.microsoft.com
+0.0.0.0	vortex.data.microsoft.com
+0.0.0.0	watson.ppe.telemetry.microsoft.com
 0.0.0.0	wes.df.telemetry.microsoft.com
+0.0.0.0	www.clarity.ms

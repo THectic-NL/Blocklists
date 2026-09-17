@@ -1,5 +1,5 @@
 # General Tracking Blocking List
-# 
+#
 # This list blocks general tracking and analytics domains:
 # - Third-party analytics and tracking
 # - Social media widgets and pixels
@@ -8,47 +8,87 @@
 # - Unwanted data collection
 #
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2025-10-12
+# Last updated: 2026-09-17
 #
-# Total domains: 31
+# Total domains: 79
 #
 
-0.0.0.0	aiden.learnwise.ai
-0.0.0.0	browser.sentry-cdn.com
-0.0.0.0	widgets.pinterest.com
-0.0.0.0	smetrics.samsung.com
+0.0.0.0	aax.amazon-adsystem.com
+0.0.0.0	adjust.com
+0.0.0.0	ads-interfaces.sc-cdn.net
 0.0.0.0	ads.samsung.com
-0.0.0.0	provisioning-use2.mgmt.aibixby.com
+0.0.0.0	ads.vungle.com
 0.0.0.0	ads.yahoo.com
 0.0.0.0	ads.yap.yahoo.com
-0.0.0.0	analytics.yahoo.com
-0.0.0.0	geo.yahoo.com
-0.0.0.0	log.fc.yahoo.com
-0.0.0.0	udc.yahoo.com
-0.0.0.0	analytics.query.yahoo.com
-
-# Mobile ad networks
-0.0.0.0	appsflyer.com
-0.0.0.0	adsmoloco.com
-0.0.0.0	ads.vungle.com
-0.0.0.0	applovin.com
-
-# Amazon advertising / tracking
-0.0.0.0	amazon-adsystem.com
-0.0.0.0	aax.amazon-adsystem.com
-0.0.0.0	fls-na.amazon.com
-0.0.0.0	device-metrics-us.amazon.com
-
-# Snapchat advertising
 0.0.0.0	adsapi.snapchat.com
-0.0.0.0	app-analytics.snapchat.com
-0.0.0.0	snapads.com
-0.0.0.0	euw.adserver.snapads.com
-0.0.0.0	usc.adserver.snapads.com
-0.0.0.0	ads-interfaces.sc-cdn.net
-
-# S3-hosted ad scripts
+0.0.0.0	adsmoloco.com
+0.0.0.0	adsrvr.org
 0.0.0.0	adtago.s3.amazonaws.com
+0.0.0.0	advertising.com
 0.0.0.0	advice-ads.s3.amazonaws.com
 0.0.0.0	affiliationjs.s3.amazonaws.com
+0.0.0.0	aiden.learnwise.ai
+0.0.0.0	amazon-adsystem.com
+0.0.0.0	amplitude.com
+0.0.0.0	analytics.query.yahoo.com
+0.0.0.0	analytics.yahoo.com
 0.0.0.0	analyticsengine.s3.amazonaws.com
+0.0.0.0	app-analytics.snapchat.com
+0.0.0.0	applovin.com
+0.0.0.0	appsflyer.com
+0.0.0.0	branch.io
+0.0.0.0	browser.sentry-cdn.com
+0.0.0.0	casalemedia.com
+0.0.0.0	chartbeat.com
+0.0.0.0	clicktale.net
+0.0.0.0	crashlytics.com
+0.0.0.0	criteo.com
+0.0.0.0	criteo.net
+0.0.0.0	decibelinsight.net
+0.0.0.0	device-metrics-us.amazon.com
+0.0.0.0	euw.adserver.snapads.com
+0.0.0.0	fls-na.amazon.com
+0.0.0.0	fullstory.com
+0.0.0.0	geo.yahoo.com
+0.0.0.0	getwisdom.io
+0.0.0.0	hotjar.com
+0.0.0.0	hoverowl.com
+0.0.0.0	imrworldwide.com
+0.0.0.0	inmobi.com
+0.0.0.0	insights.hotjar.com
+0.0.0.0	inspectlet.com
+0.0.0.0	kochava.com
+0.0.0.0	log.fc.yahoo.com
+0.0.0.0	logrocket.com
+0.0.0.0	luckyorange.com
+0.0.0.0	mc.yandex.ru
+0.0.0.0	mixpanel.com
+0.0.0.0	mouseflow.com
+0.0.0.0	mousestats.com
+0.0.0.0	openx.net
+0.0.0.0	outbrain.com
+0.0.0.0	overheat.de
+0.0.0.0	provisioning-use2.mgmt.aibixby.com
+0.0.0.0	pubmatic.com
+0.0.0.0	quantserve.com
+0.0.0.0	quantummetric.com
+0.0.0.0	rubiconproject.com
+0.0.0.0	salemove.com
+0.0.0.0	scorecardresearch.com
+0.0.0.0	script.hotjar.com
+0.0.0.0	seevolution.com
+0.0.0.0	segment.com
+0.0.0.0	segment.io
+0.0.0.0	sessioncam.com
+0.0.0.0	settings.crashlytics.com
+0.0.0.0	singular.net
+0.0.0.0	smartlook.com
+0.0.0.0	smetrics.samsung.com
+0.0.0.0	snapads.com
+0.0.0.0	taboola.com
+0.0.0.0	udc.yahoo.com
+0.0.0.0	usc.adserver.snapads.com
+0.0.0.0	userreplay.net
+0.0.0.0	vwo.com
+0.0.0.0	widgets.pinterest.com
+0.0.0.0	ws.sessioncam.com
