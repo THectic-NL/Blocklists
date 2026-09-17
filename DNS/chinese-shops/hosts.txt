@@ -1,5 +1,5 @@
 # Chinese Shops Blocking List
-# 
+#
 # This list blocks Chinese marketplace domains known for aggressive tracking:
 # - Temu and PDD Holdings tracking infrastructure
 # - AliExpress, Alibaba, and Taobao analytics
@@ -9,50 +9,70 @@
 #
 # These platforms are known for extensive data collection and tracking
 # Format: 0.0.0.0 domain.com (hosts file format)
-# Last updated: 2025-10-12
+# Last updated: 2026-09-17
 #
-# Total domains: 42
+# Total domains: 62
 #
 
+0.0.0.0	1688.com
 0.0.0.0	ae-rus.net
 0.0.0.0	ae-rus.ru
+0.0.0.0	alibaba-inc.com
 0.0.0.0	alibaba.com
+0.0.0.0	alibabagroup.com
 0.0.0.0	alicdn.com
+0.0.0.0	aliexpress-media.com
 0.0.0.0	aliexpress.com
 0.0.0.0	aliexpress.ru
-0.0.0.0	aliexpress-media.com
-0.0.0.0	alipayobjects.com
-0.0.0.0	app-temu-com.trafficmanager.net
-0.0.0.0	assets.aliexpress-media.com
-0.0.0.0	cdn.wish.com
-0.0.0.0	ds.temu.com
-0.0.0.0	eu.thtk.temu.com
-0.0.0.0	gw.temu.com
-0.0.0.0	gw-temu-com.trafficmanager.net
-0.0.0.0	kwcdn.co
-0.0.0.0	kwcdn.com
-0.0.0.0	locale-temu-com.trafficmanager.net
-0.0.0.0	ltwebstatic.com
-0.0.0.0	m.wish.com
-0.0.0.0	matk.temu.com
-0.0.0.0	nl.shein.com
-0.0.0.0	pftk.temu.com
-0.0.0.0	shein.com
-0.0.0.0	slatic.net
-0.0.0.0	taobao.com
-0.0.0.0	temu.com
-0.0.0.0	temu-com.trafficmanager.net
-0.0.0.0	temu-gtm.trafficmanager.net
-0.0.0.0	thtk.temu.com
-0.0.0.0	wish.com
-0.0.0.0	www.aliexpress.com
-0.0.0.0	www.wish.com
-0.0.0.0	1688.com
-0.0.0.0	alibaba-inc.com
 0.0.0.0	aliexpress.us
+0.0.0.0	alipayobjects.com
 0.0.0.0	aliyun.com
 0.0.0.0	aliyuncs.com
-0.0.0.0	pdd.com
-0.0.0.0	pinduoduo.com
-0.0.0.0	yangkeduo.com
+0.0.0.0	app-temu-com.trafficmanager.net
+0.0.0.0	assets.aliexpress-media.com
+0.0.0.0	banggood.com
+0.0.0.0	cdn.wish.com
 0.0.0.0	contextlogic.com
+0.0.0.0	dhgate.com
+0.0.0.0	ds.temu.com
+0.0.0.0	eu.thtk.temu.com
+0.0.0.0	gearbest.com
+0.0.0.0	gw-temu-com.trafficmanager.net
+0.0.0.0	gw.temu.com
+0.0.0.0	joom.com
+0.0.0.0	kwcdn.co
+0.0.0.0	kwcdn.com
+0.0.0.0	lazada.com
+0.0.0.0	locale-temu-com.trafficmanager.net
+0.0.0.0	ltwebstatic.com
+0.0.0.0	m.shein.com
+0.0.0.0	m.wish.com
+0.0.0.0	matk.temu.com
+0.0.0.0	miravia.es
+0.0.0.0	nl.shein.com
+0.0.0.0	pdd.com
+0.0.0.0	pddglobal.com
+0.0.0.0	pftk.temu.com
+0.0.0.0	pinduoduo.com
+0.0.0.0	romwe.com
+0.0.0.0	shein.co.uk
+0.0.0.0	shein.com
+0.0.0.0	shein.de
+0.0.0.0	shein.fr
+0.0.0.0	sheincorp.com
+0.0.0.0	sheingroup.com
+0.0.0.0	sheinm.com
+0.0.0.0	slatic.net
+0.0.0.0	taobao.com
+0.0.0.0	temu-com.trafficmanager.net
+0.0.0.0	temu-gtm.trafficmanager.net
+0.0.0.0	temu.com
+0.0.0.0	temuseller.com
+0.0.0.0	thtk.temu.com
+0.0.0.0	tmall.com
+0.0.0.0	us.shein.com
+0.0.0.0	wish.com
+0.0.0.0	world.taobao.com
+0.0.0.0	www.aliexpress.com
+0.0.0.0	www.wish.com
+0.0.0.0	yangkeduo.com

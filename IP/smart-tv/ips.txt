@@ -1,0 +1,367 @@
+# Smart-TV ACR IP blocklist
+#
+# This is the IP side of ../../DNS/acr/. Use it at the firewall (pfSense/pfBlockerNG,
+# OPNsense, ipset/nftables, router ACLs) for the case DNS blocking does not cover.
+#
+# Why you want this as well as the DNS list. Samsung and LG sets ship with resolver
+# addresses compiled into the firmware, and several models fall back to DNS-over-HTTPS
+# when the resolver you handed out over DHCP refuses to answer. A TV that talks to
+# 8.8.8.8 directly never sees your Pi-hole. Two things fix that, and you want both:
+# redirect outbound port 53 and 853 back to your own resolver, and drop the addresses
+# below at the firewall.
+#
+# The same warning as the Datto list applies, more so here. Most of what is left sits
+# on AWS, so it moves when AWS reassigns an address, and a load balancer can front
+# more than one tenant. The DNS lists remain the reliable block. Treat this as a
+# backstop and re-check it.
+#
+# Addresses on shared CDN and anycast networks are deliberately left out, because
+# dropping one of those at the firewall takes down arbitrary unrelated traffic rather
+# than the TV. Five were removed for that reason: the two Cloudflare addresses behind
+# inscape.tv, the two behind ads.roku.com, and the Akamai address behind
+# aic-ngfts.lge.com. All three hostnames are still blocked by name in ../../DNS/acr/,
+# which is the right layer for anything sitting on a shared network.
+#
+# What is worth knowing about the LG section below: 26 addresses cover 597 hostnames,
+# and eight of those 26 do most of the work, each answering for 316 of LG's
+# per-country ad hostnames.
+#
+# Resolved on 2026-09-17. Hostnames that did not resolve from this vantage point are
+# not listed; several LG and Samsung endpoints only answer inside their own region.
+#
+# Total addresses: 310
+#
+
+# LG Ad Solutions / Alphonso ACR (lgsmartad, lgads, alphonso.tv)
+# 26 addresses, covering 597 hostnames
+
+# LG webOS data platform (lgtvcommon CDP beacon, rdl)
+# 42 addresses, covering 7 hostnames
+3.34.120.24
+15.164.206.70
+16.144.199.72
+32.188.177.172
+32.189.219.164
+35.80.100.199
+40.180.11.175
+43.200.132.56
+43.202.98.98
+44.241.75.251
+44.241.109.144
+52.17.133.16
+52.19.144.5
+52.25.234.65
+52.26.119.4
+52.37.209.37
+52.50.139.132
+52.213.36.185
+54.187.47.7
+54.246.216.208
+63.33.20.174
+63.34.48.78
+141.193.213.10
+158.255.4.38
+165.244.150.53
+203.247.138.53
+3.34.225.250
+3.34.233.151
+3.39.153.21
+32.189.124.124
+34.209.164.161
+35.86.41.132
+35.161.71.164
+43.202.195.228
+46.51.149.181
+52.12.212.184
+52.27.92.50
+52.79.152.185
+54.71.85.131
+54.116.194.125
+54.154.100.242
+54.187.214.86
+
+# Samsung ACR fingerprint ingest (samsungacr.com, samsungcloud.tv)
+# 128 addresses, covering 13 hostnames
+3.34.175.62
+3.92.220.54
+3.97.248.206
+3.208.221.202
+3.209.114.113
+3.209.149.121
+3.212.79.171
+3.217.11.93
+3.226.110.247
+3.234.95.195
+13.126.56.2
+13.204.191.153
+13.205.232.5
+13.206.193.245
+13.239.46.156
+15.135.255.133
+15.156.254.95
+15.157.86.0
+15.165.84.7
+15.165.84.115
+15.175.23.176
+15.207.192.51
+15.252.65.190
+16.52.24.3
+16.52.110.63
+16.52.110.211
+18.203.131.210
+18.228.217.139
+18.235.56.225
+32.186.96.5
+34.212.3.8
+34.226.163.179
+34.242.60.223
+34.243.65.0
+34.247.179.168
+34.248.210.191
+35.169.253.43
+43.202.196.240
+43.203.4.251
+43.204.201.21
+44.195.109.4
+52.31.162.23
+52.36.217.60
+52.54.226.16
+52.62.170.164
+52.63.85.197
+52.71.191.221
+52.78.251.245
+52.215.40.211
+54.76.18.73
+54.76.157.60
+54.77.49.44
+54.87.180.236
+54.94.225.128
+54.94.255.135
+54.170.110.233
+54.170.177.99
+54.194.227.62
+54.207.23.236
+54.220.245.9
+54.232.66.60
+54.232.170.180
+54.237.89.45
+56.125.161.149
+56.126.48.186
+65.0.237.68
+99.79.125.105
+100.48.107.158
+100.61.59.3
+100.61.87.99
+108.128.173.155
+108.132.24.193
+172.173.184.181
+184.33.114.249
+2406:da12:a85:c202:1d58:c78:a090:fe86
+2406:da12:a85:c202:6bbf:121:4a04:b403
+2406:da12:a85:c202:8760:6ea2:45fc:ef40
+2406:da12:a85:c203:322c:6632:c0be:2c3e
+2406:da12:a85:c203:4840:b783:e1e1:73b5
+2406:da12:a85:c203:ab1e:cb15:a570:af9f
+2406:da1a:789:ab03:1c04:6ec8:ffa2:db6b
+2406:da1a:789:ab03:ce7:f6f7:493:7a35
+2406:da1a:789:ab03:e118:bba:8af5:d275
+2406:da1a:789:ab04:25c1:8219:cf1a:9f02
+2406:da1a:789:ab04:42aa:318b:90bc:ec4c
+2406:da1a:789:ab04:61a9:99e5:780b:27b0
+2406:da1a:789:ab04:9521:cb64:11dc:5a1b
+2406:da1a:789:ab04:9f3c:841b:77de:69f1
+2406:da1c:41f:4802:6efc:61eb:ab70:8d79
+2406:da1c:41f:4803:5ffa:3b09:3555:71a4
+2406:da1c:e1:ba02:ef4a:e558:3ad3:569a
+2406:da1c:e1:ba03:278d:c05a:bc14:5c74
+2600:1f10:4eb7:2402:1709:4ac9:cee5:5a1c
+2600:1f10:4eb7:2402:420e:e6c7:9264:bfe0
+2600:1f10:4eb7:2402:485e:85cd:22e0:b388
+2600:1f10:4eb7:2402:89ea:bb6:310a:b1b0
+2600:1f10:4eb7:2402:c17:e21d:15e3:a8a2
+2600:1f10:4eb7:2403:20a0:5042:76e:ef80
+2600:1f10:4eb7:2403:39e8:9fd0:3f2a:62f6
+2600:1f10:4eb7:2403:f150:76d5:4d21:f1f4
+2600:1f11:993:8e02:23cc:33b8:f9c9:523e
+2600:1f11:993:8e02:24b4:3081:2293:a7b6
+2600:1f11:993:8e02:b883:4cbc:ae8a:4861
+2600:1f11:993:8e02:fea2:cd4:1bf0:bda
+2600:1f11:993:8e03:154e:c9df:2f41:7542
+2600:1f11:993:8e03:160:eac9:5c50:4136
+2600:1f11:993:8e03:2c63:3ec1:d28e:e7a1
+2600:1f11:993:8e03:a731:e34f:9876:999
+2600:1f14:2257:3d02:3cab:f75d:9092:e451
+2600:1f14:2257:3d02:cb5b:95d2:ba2b:c214
+2600:1f14:2257:3d03:8825:f104:58dd:ac20
+2600:1f14:2257:3d03:f5da:9ead:1cf7:96c3
+2600:1f1e:9e0:1c02:4163:572b:ae9a:4f92
+2600:1f1e:9e0:1c02:4fbb:562:c5a:b955
+2600:1f1e:9e0:1c02:9746:a016:93e0:2c2f
+2600:1f1e:9e0:1c02:a452:7e31:231b:545b
+2600:1f1e:9e0:1c02:dacf:a295:bd01:b98a
+2600:1f1e:9e0:1c03:40ed:7862:a3d1:973b
+2600:1f1e:9e0:1c03:8d74:aff4:9b43:7471
+2600:1f1e:9e0:1c03:d74a:a753:aaf5:63e6
+2a05:d018:3f:5604:2c26:131d:f590:64f3
+2a05:d018:3f:5604:4c51:9bdc:2524:494c
+2a05:d018:3f:5604:8209:1d04:511f:8d2a
+2a05:d018:3f:5604:b35e:9d60:be74:8578
+2a05:d018:3f:5604:cd29:f4e8:4935:8a7d
+2a05:d018:3f:5605:2d0:e269:d61a:b9d6
+2a05:d018:3f:5605:36a5:e924:948f:4cae
+2a05:d018:3f:5605:414c:db01:bd5:18f9
+
+# Vizio Inscape (inscape.tv, tvinteractive.tv)
+# 9 addresses, covering 5 hostnames
+3.227.222.148
+3.228.204.244
+18.207.236.242
+23.20.95.164
+34.200.36.107
+50.19.92.75
+52.87.151.83
+54.87.162.196
+54.157.11.213
+
+# Samba TV (samba.tv, flingo.tv)
+# 8 addresses, covering 7 hostnames
+31.43.160.6
+31.43.161.6
+44.208.131.0
+100.25.103.196
+216.183.117.90
+216.183.117.104
+216.183.117.106
+216.183.117.108
+
+# Roku advertising and measurement
+# 63 addresses, covering 11 hostnames
+3.95.141.78
+3.222.220.153
+18.154.101.17
+18.154.101.44
+18.154.101.58
+18.154.101.69
+18.154.101.79
+18.154.101.83
+18.154.101.86
+18.154.101.125
+18.238.138.220
+34.4.33.227
+34.4.36.66
+35.169.205.71
+35.212.1.69
+35.212.6.214
+35.212.9.111
+35.212.21.137
+35.212.26.4
+35.212.27.142
+35.212.37.201
+35.212.38.4
+35.212.49.125
+35.212.52.18
+35.212.72.60
+35.212.72.105
+35.212.77.108
+35.212.79.121
+35.212.84.3
+35.212.92.177
+35.212.99.223
+35.212.99.245
+35.212.104.14
+35.212.112.54
+35.212.116.79
+35.212.119.44
+35.212.122.161
+52.205.184.121
+173.203.194.136
+2600:1900:4090:356b:0:12c::
+2600:1900:4090:356b:0:138::
+2600:1900:4090:356b:0:15f::
+2600:1900:4090:356b:0:163::
+2600:1900:4090:356b:0:166::
+2600:1900:4090:356b:0:17e::
+2600:1900:4090:356b:0:186::
+2600:1900:4090:356b:0:1cb::
+2600:1900:4090:356b:0:1e7::
+2600:1900:4090:356b:0:1fe::
+2600:1900:4090:356b:0:218::
+2600:1900:4090:356b:0:21d::
+2600:1900:4090:356b:0:23a::
+2600:1900:4090:356b:0:23c::
+2600:1900:4090:356b:0:23d::
+2600:1900:4090:356b:0:23e::
+2600:1900:4090:356b:0:24a::
+2600:1900:4090:356b:0:4ae::
+2600:1900:4090:356b:0:4b0::
+2600:1900:4090:356b:0:4b2::
+2600:1900:4090:356b:0:4b7::
+2600:1900:4090:356b:0:64::
+2600:1900:4090:356b:0:c5::
+2600:1900:4090:356b:0:d8::
+
+# Nielsen / INFOnline / AT Internet measurement panels
+# 24 addresses, covering 6 hostnames
+16.144.6.209
+32.185.82.48
+34.149.239.203
+35.81.228.153
+35.86.5.241
+35.164.97.77
+44.247.172.175
+52.26.66.0
+54.68.180.191
+54.229.167.72
+99.80.54.20
+99.84.111.54
+99.84.118.31
+99.84.118.32
+99.84.118.34
+99.84.118.94
+2600:9000:2162:5e00:1e:a43d:b640:93a1
+2600:9000:2162:6200:1e:a43d:b640:93a1
+2600:9000:2162:6c00:1e:a43d:b640:93a1
+2600:9000:2162:7a00:1e:a43d:b640:93a1
+2600:9000:2162:8c00:1e:a43d:b640:93a1
+2600:9000:2162:b400:1e:a43d:b640:93a1
+2600:9000:2162:bc00:1e:a43d:b640:93a1
+2600:9000:2162:fe00:1e:a43d:b640:93a1
+
+# smartclip, Yume, SpotX and other CTV ad infrastructure
+# 36 addresses, covering 15 hostnames
+3.169.202.2
+3.169.202.18
+3.169.202.37
+3.169.202.54
+18.67.13.95
+18.67.13.100
+18.67.13.113
+18.67.13.121
+34.117.119.206
+34.254.220.48
+35.212.56.18
+52.17.142.92
+52.48.0.253
+52.48.188.209
+52.209.122.124
+52.209.206.246
+54.76.232.184
+63.135.90.156
+99.84.105.101
+99.84.105.102
+99.84.105.124
+99.84.105.128
+99.84.118.25
+99.84.118.42
+99.84.118.106
+100.52.56.118
+192.117.187.254
+199.127.205.194
+2600:9000:20ba:2200:d:cfbd:e600:93a1
+2600:9000:20ba:2e00:d:cfbd:e600:93a1
+2600:9000:20ba:7a00:d:cfbd:e600:93a1
+2600:9000:20ba:8800:d:cfbd:e600:93a1
+2600:9000:20ba:a000:d:cfbd:e600:93a1
+2600:9000:20ba:ca00:d:cfbd:e600:93a1
+2600:9000:20ba:dc00:d:cfbd:e600:93a1
+2600:9000:20ba:e200:d:cfbd:e600:93a1

@@ -10,8 +10,9 @@
 # is the more reliable block. Think of the IPs as a backstop and re-check them
 # every so often.
 #
-# Current addresses were resolved on 2026-06-25. datto.io and the centrastage.net
-# apex are blocked locally here, so those two could not be resolved.
+# Current addresses were re-resolved on 2026-09-17 and a few had rotated since the
+# previous pass, which is what the warning above is about. datto.io and the
+# centrastage.net apex are blocked locally here, so those two are still unresolved.
 
 # Original fallback addresses, the set that shipped with the old hosts.txt
 75.2.101.69
@@ -34,16 +35,17 @@
 54.154.123.55
 
 # Datto and Kaseya websites (kaseya.com, www.kaseya.com, www.datto.com)
+3.33.186.135
+15.197.167.90
 141.193.213.20
 141.193.213.21
 
 # Datto backup and partner portals (dattobackup.com, partners.datto.com)
-162.244.87.109
 162.244.87.60
+162.244.87.109
 
 # datto.com and its portal, sitting on Akamai
-184.30.85.162
-184.30.85.104
+23.210.134.102
 
 # Datto api, auth and help (api and auth are on Cloudflare)
 104.18.40.217
@@ -51,10 +53,6 @@
 172.64.147.5
 172.64.147.39
 206.201.138.131
-2606:4700:4400::6812:28fb
-2606:4700:4409::6812:28d9
-2606:4700:440c::ac40:9327
-2a06:98c1:3106::ac40:9305
 
 # Datto status page (status.datto.com, AWS)
 3.169.202.30
@@ -69,7 +67,6 @@
 18.238.136.129
 
 # Datto RMM platforms on centrastage.net, fronted by AWS CloudFront so they rotate
-# concord, merlot, zinfandel, vidal
 13.226.251.3
 13.226.251.5
 13.226.251.14
@@ -86,25 +83,22 @@
 13.226.251.108
 13.226.251.124
 13.226.251.127
-# syrah
 18.154.101.2
 18.154.101.41
 18.154.101.109
 18.154.101.126
-# pinotage
 99.84.118.34
 99.84.118.58
 99.84.118.77
 99.84.118.106
 
 # Kaseya portals and support (portal, support, helpdesk and one.kaseya.com)
+150.171.110.3
 212.54.132.22
 216.23.162.20
-104.18.248.37
-104.18.249.37
-150.171.110.195
-2603:1061:14:b6::1
+216.198.53.11
+216.198.54.11
 
 # Infocyte, now part of Datto (infocyte.com, app.infocyte.com)
-35.196.255.66
 3.227.41.20
+35.196.255.66

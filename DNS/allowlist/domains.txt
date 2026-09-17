@@ -53,8 +53,6 @@ wireguard.com
 windscribe.com
 yahoo.com
 webos.com
-lgtvsdp.com
-lgappstv.com
 samsung.com
 samsung.net
 samsungcloudsolution.com
