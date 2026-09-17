@@ -22,12 +22,12 @@ Each list has its own folder under DNS/.
 | [DNS/tiktok/](DNS/tiktok/) | 6916 | TikTok, ByteDance |
 | [DNS/smart-tv/](DNS/smart-tv/) | 1952 | Everything a smart TV phones home: ACR, ads, telemetry |
 | [DNS/acr/](DNS/acr/) | 765 | Automatic Content Recognition only, the narrow cut |
+| [DNS/scam/](DNS/scam/) | 382 | Known scam and fraud sites |
 | [DNS/tracking/](DNS/tracking/) | 79 | General tracking, session replay, Snapchat, Amazon Ads |
 | [DNS/chinese-shops/](DNS/chinese-shops/) | 62 | Temu, AliExpress, Shein, Wish |
 | [DNS/meta/](DNS/meta/) | 51 | Facebook, Instagram, Threads, Meta tracking |
 | [DNS/microsoft/](DNS/microsoft/) | 50 | Windows telemetry |
 | [DNS/google/](DNS/google/) | 49 | Google Ads, Analytics, DoubleClick, Android TV |
-| [DNS/scam/](DNS/scam/) | 14 | Known scam and fraud sites |
 | [DNS/datto-kaseya/](DNS/datto-kaseya/) | 6 | Datto RMM, Kaseya |
 | [DNS/allowlist/](DNS/allowlist/) | 137 | Domains that should never be blocked |
 
