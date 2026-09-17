@@ -14,7 +14,7 @@ apart.
 
 | Folder | IPs | Notes |
 |---|---|---|
-| [smart-tv/](smart-tv/) | 315 | Smart-TV ACR ingest, the IP side of [../DNS/acr/](../DNS/acr/) |
+| [smart-tv/](smart-tv/) | 310 | Smart-TV ACR ingest, the IP side of [../DNS/acr/](../DNS/acr/) |
 | [datto-kaseya/](datto-kaseya/) | 69 | Datto RMM and Kaseya, the IP side of [../DNS/datto-kaseya/](../DNS/datto-kaseya/) |
 
 The smart-TV list exists because a DNS block is not always enough there. Samsung

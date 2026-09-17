@@ -10,20 +10,33 @@
 # redirect outbound port 53 and 853 back to your own resolver, and drop the addresses
 # below at the firewall.
 #
-# The same warning as the Datto list applies, more so here. Most of these sit on AWS,
-# Akamai and Cloudflare, they move, and they can front unrelated services. The eight
-# addresses under LG Ad Solutions each serve 316 of LG's per-country ad hostnames, so
-# they are worth blocking, but they are AWS load balancers and AWS reassigns those.
-# The DNS lists remain the reliable block. Treat this as a backstop and re-check it.
+# The same warning as the Datto list applies, more so here. Most of what is left sits
+# on AWS, so it moves when AWS reassigns an address, and a load balancer can front
+# more than one tenant. The DNS lists remain the reliable block. Treat this as a
+# backstop and re-check it.
+#
+# Addresses on shared CDN and anycast networks are deliberately left out, because
+# dropping one of those at the firewall takes down arbitrary unrelated traffic rather
+# than the TV. Five were removed for that reason: the two Cloudflare addresses behind
+# inscape.tv, the two behind ads.roku.com, and the Akamai address behind
+# aic-ngfts.lge.com. All three hostnames are still blocked by name in ../../DNS/acr/,
+# which is the right layer for anything sitting on a shared network.
+#
+# What is worth knowing about the LG section below: 26 addresses cover 597 hostnames,
+# and eight of those 26 do most of the work, each answering for 316 of LG's
+# per-country ad hostnames.
 #
 # Resolved on 2026-09-17. Hostnames that did not resolve from this vantage point are
 # not listed; several LG and Samsung endpoints only answer inside their own region.
 #
-# Total addresses: 315
+# Total addresses: 310
 #
 
 # LG Ad Solutions / Alphonso ACR (lgsmartad, lgads, alphonso.tv)
 # 26 addresses, covering 597 hostnames
+
+# LG webOS data platform (lgtvcommon CDP beacon, rdl)
+# 42 addresses, covering 7 hostnames
 3.34.120.24
 15.164.206.70
 16.144.199.72
@@ -50,13 +63,9 @@
 158.255.4.38
 165.244.150.53
 203.247.138.53
-
-# LG webOS data platform (lgtvcommon CDP beacon, rdl)
-# 17 addresses, covering 7 hostnames
 3.34.225.250
 3.34.233.151
 3.39.153.21
-23.43.212.70
 32.189.124.124
 34.209.164.161
 35.86.41.132
@@ -203,7 +212,7 @@
 2a05:d018:3f:5605:414c:db01:bd5:18f9
 
 # Vizio Inscape (inscape.tv, tvinteractive.tv)
-# 11 addresses, covering 5 hostnames
+# 9 addresses, covering 5 hostnames
 3.227.222.148
 3.228.204.244
 18.207.236.242
@@ -213,8 +222,6 @@
 52.87.151.83
 54.87.162.196
 54.157.11.213
-104.18.6.107
-104.18.7.107
 
 # Samba TV (samba.tv, flingo.tv)
 # 8 addresses, covering 7 hostnames
@@ -228,7 +235,7 @@
 216.183.117.108
 
 # Roku advertising and measurement
-# 65 addresses, covering 11 hostnames
+# 63 addresses, covering 11 hostnames
 3.95.141.78
 3.222.220.153
 18.154.101.17
@@ -267,8 +274,6 @@
 35.212.119.44
 35.212.122.161
 52.205.184.121
-162.159.135.11
-162.159.136.11
 173.203.194.136
 2600:1900:4090:356b:0:12c::
 2600:1900:4090:356b:0:138::

@@ -1498,7 +1498,6 @@ rw.lgsmartad.com
 rw.lgtvsdp.com
 rw.nextlgsdp.com
 rw.rdx2.lgtvsdp.com
-rwww.samsungotn.net
 sa-ad-lgsmartad-com.aws-prd.net
 sa-info-lgsmartad-com.aws-prd.net
 sa-rdx2-lgtvsdp-com.aws-prd.net
@@ -1515,7 +1514,6 @@ samsungadhub.com
 samsungadhub.net
 samsungads.com
 samsungads.net
-samsungotn.net
 samsungrm.com
 samsungrm.net
 samsungtvads.com
@@ -1899,7 +1897,6 @@ vu.nextlgsdp.com
 wpu.samsungelectronics.com
 ws.lgrecommends.lgappstv.com
 ws.nextlgsdp.com
-www.samsungotn.net
 www.samsungrm.net
 x2.vindicosuite.com
 xiti.com

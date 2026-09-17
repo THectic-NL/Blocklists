@@ -20,7 +20,7 @@ Each list has its own folder under DNS/.
 | Folder | Domains | Blocks |
 |---|---|---|
 | [DNS/tiktok/](DNS/tiktok/) | 6916 | TikTok, ByteDance |
-| [DNS/smart-tv/](DNS/smart-tv/) | 1955 | Everything a smart TV phones home: ACR, ads, telemetry |
+| [DNS/smart-tv/](DNS/smart-tv/) | 1952 | Everything a smart TV phones home: ACR, ads, telemetry |
 | [DNS/acr/](DNS/acr/) | 765 | Automatic Content Recognition only, the narrow cut |
 | [DNS/tracking/](DNS/tracking/) | 79 | General tracking, session replay, Snapchat, Amazon Ads |
 | [DNS/chinese-shops/](DNS/chinese-shops/) | 62 | Temu, AliExpress, Shein, Wish |
@@ -76,7 +76,7 @@ These block at the firewall instead of the resolver. See [IP/](IP/).
 
 | Folder | IPs | Notes |
 |---|---|---|
-| [IP/smart-tv/](IP/smart-tv/) | 315 | ACR ingest addresses, for TVs that bypass DNS |
+| [IP/smart-tv/](IP/smart-tv/) | 310 | ACR ingest addresses, for TVs that bypass DNS |
 | [IP/datto-kaseya/](IP/datto-kaseya/) | 69 | Datto RMM and Kaseya addresses |
 
 Each folder has an ips.txt with one address per line, ready for ipset/nftables,

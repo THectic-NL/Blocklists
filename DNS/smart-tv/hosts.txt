@@ -17,8 +17,13 @@
 # - HbbTV red-button tracking from broadcasters, which rides along on any HbbTV set
 #
 # Not blocked on purpose: firmware and app updates, NTP, certificate revocation,
-# account sign-in, and streaming apps themselves. Vizio's api/images/announcements
-# hosts are left alone because SmartCast needs them.
+# account sign-in, and streaming apps themselves. Vizio's api, images and
+# announcements hosts are left alone because SmartCast needs them.
+#
+# samsungotn.net is absent for the same reason. OTN is Samsung's over-the-network
+# firmware update channel, so blocking it stops the TV picking up security fixes,
+# which is a worse outcome than the telemetry it would prevent. Add it yourself if
+# freezing the firmware is what you are after.
 #
 # NextDNS note: allowlist entries match subdomains there, so an apex in
 # DNS/allowlist/ can switch entries below back on. The two LG apexes that used to do
@@ -29,7 +34,7 @@
 # Format: 0.0.0.0 domain.com (hosts file format)
 # Last updated: 2026-09-17
 #
-# Total domains: 1955
+# Total domains: 1952
 #
 
 0.0.0.0	0077777700140002.myhomescreen.tv
@@ -1532,7 +1537,6 @@
 0.0.0.0	rw.lgtvsdp.com
 0.0.0.0	rw.nextlgsdp.com
 0.0.0.0	rw.rdx2.lgtvsdp.com
-0.0.0.0	rwww.samsungotn.net
 0.0.0.0	sa-ad-lgsmartad-com.aws-prd.net
 0.0.0.0	sa-info-lgsmartad-com.aws-prd.net
 0.0.0.0	sa-rdx2-lgtvsdp-com.aws-prd.net
@@ -1549,7 +1553,6 @@
 0.0.0.0	samsungadhub.net
 0.0.0.0	samsungads.com
 0.0.0.0	samsungads.net
-0.0.0.0	samsungotn.net
 0.0.0.0	samsungrm.com
 0.0.0.0	samsungrm.net
 0.0.0.0	samsungtvads.com
@@ -1933,7 +1936,6 @@
 0.0.0.0	wpu.samsungelectronics.com
 0.0.0.0	ws.lgrecommends.lgappstv.com
 0.0.0.0	ws.nextlgsdp.com
-0.0.0.0	www.samsungotn.net
 0.0.0.0	www.samsungrm.net
 0.0.0.0	x2.vindicosuite.com
 0.0.0.0	xiti.com
