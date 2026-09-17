@@ -29,7 +29,7 @@ Each list has its own folder under DNS/.
 | [DNS/google/](DNS/google/) | 49 | Google Ads, Analytics, DoubleClick, Android TV |
 | [DNS/scam/](DNS/scam/) | 14 | Known scam and fraud sites |
 | [DNS/datto-kaseya/](DNS/datto-kaseya/) | 6 | Datto RMM, Kaseya |
-| [DNS/allowlist/](DNS/allowlist/) | 139 | Domains that should never be blocked |
+| [DNS/allowlist/](DNS/allowlist/) | 137 | Domains that should never be blocked |
 
 Each folder has two files. hosts.txt is for Pi-hole and AdGuard Home, with lines
 like `0.0.0.0 domain.com`. domains.txt is a plain list for NextDNS and anything
@@ -60,9 +60,11 @@ than a wildcard, which is why they have to be listed out.
 Two caveats worth knowing before you rely on this:
 
 - **The allowlist can cancel part of it.** NextDNS matches allowlist entries
-  against subdomains too, so the `lgtvsdp.com` and `lgappstv.com` entries in
-  [DNS/allowlist/](DNS/allowlist/) switch 535 of the LG blocks back on. Pi-hole
-  matches exactly and is unaffected. The allowlist header spells this out.
+  against subdomains too, so an apex in [DNS/allowlist/](DNS/allowlist/) switches
+  entries back on. The two LG apexes that did this have been removed;
+  `samsungcloudsolution.com` and `samsung.com` stay and shadow 30 entries between
+  them, because Samsung sign-in and the app store run on them. Pi-hole matches
+  exactly and is unaffected.
 - **The TV may not use your resolver.** Samsung and LG sets ship with DNS servers
   in the firmware and some fall back to DNS-over-HTTPS. Redirect outbound port 53
   and 853 to your own resolver at the router, and use

@@ -20,10 +20,11 @@
 # account sign-in, and streaming apps themselves. Vizio's api/images/announcements
 # hosts are left alone because SmartCast needs them.
 #
-# NextDNS note: DNS/allowlist/ contains the apex entries lgtvsdp.com and
-# lgappstv.com. NextDNS allowlists match subdomains, so those two shadow 535 of the
-# LG entries below. Drop them from the allowlist to get the full effect. Pi-hole and
-# hosts-format allowlists match exactly, so they are unaffected.
+# NextDNS note: allowlist entries match subdomains there, so an apex in
+# DNS/allowlist/ can switch entries below back on. The two LG apexes that used to do
+# that have been removed. What remains is samsungcloudsolution.com and samsung.com,
+# which shadow 30 entries between them and stay because Samsung account sign-in and
+# the app store run on them. Pi-hole matches exactly and is unaffected.
 #
 # Format: 0.0.0.0 domain.com (hosts file format)
 # Last updated: 2026-09-17

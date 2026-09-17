@@ -5,30 +5,25 @@
 #
 # Read this before you run the smart-TV lists
 #
-# How an allowlist entry behaves depends on the resolver, and the difference matters
-# now that DNS/acr/ and DNS/smart-tv/ carry per-country vendor hostnames.
+# How an allowlist entry behaves depends on the resolver. NextDNS matches an entry
+# against the domain and all of its subdomains; Pi-hole and other hosts-format
+# allowlists match exactly. That difference matters now that DNS/acr/ and
+# DNS/smart-tv/ carry per-country vendor hostnames.
 #
-# NextDNS matches an allowlist entry against the domain and all of its subdomains.
-# Four entries below therefore switch large parts of those lists back on:
+# lgtvsdp.com and lgappstv.com used to sit here and were shadowing 535 of the LG
+# entries in DNS/smart-tv/, among them the rdx2 data exchange and the lgrecommends
+# home-screen profiling endpoints. They have been removed on purpose. If the LG
+# Content Store or a webOS service you need stops working, put back the specific
+# hostname it calls rather than the apex.
 #
-#   lgtvsdp.com               shadows 321 smart-tv entries
-#   lgappstv.com              shadows 214 smart-tv entries
-#   samsungcloudsolution.com  shadows 15
-#   samsung.com               shadows 15
-#
-# That is 535 LG hostnames, among them the rdx2 data exchange and the lgrecommends
-# home-screen profiling endpoints. Remove those four lines if you want the full
-# effect and are willing to risk the LG Content Store and Samsung account sign-in.
-# They stay in by default because breaking someone's TV silently is worse than
-# leaving a gap they can see.
-#
-# Pi-hole and other hosts-format allowlists match exactly, not by suffix, so they
-# are not affected and need no change.
+# Two Samsung apexes are still here and still shadow 30 smart-tv entries between
+# them, samsungcloudsolution.com and samsung.com. They stay because Samsung account
+# sign-in and the app store run on them.
 #
 # Format: 0.0.0.0 domain.com (hosts file format)
 # Last updated: 2026-09-17
 #
-# Total domains: 139
+# Total domains: 137
 #
 
 0.0.0.0	v10.events.data.microsoft.com
@@ -86,8 +81,6 @@
 0.0.0.0	windscribe.com
 0.0.0.0	yahoo.com
 0.0.0.0	webos.com
-0.0.0.0	lgtvsdp.com
-0.0.0.0	lgappstv.com
 0.0.0.0	samsung.com
 0.0.0.0	samsung.net
 0.0.0.0	samsungcloudsolution.com
